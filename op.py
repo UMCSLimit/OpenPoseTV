@@ -12,10 +12,9 @@ try:
     # Windows Import
     if platform == "win32":
         # Change these variables to point to the correct folder (Release/x64 etc.) 
-        # sys.path.append(dir_path + '/../../python/openpose/Release')
-        # os.environ['PATH']  = os.environ['PATH'] + ';' + dir_path + '/../../x64/Release;' +  dir_path + '/../../bin;'
-        # import pyopenpose as op
-        pass
+        sys.path.append(dir_path + '/../../python/openpose/Release')
+        os.environ['PATH']  = os.environ['PATH'] + ';' + dir_path + '/../../x64/Release;' +  dir_path + '/../../bin;'
+        import pyopenpose as op
     else:
         # Change these variables to point to the correct folder (Release/x64 etc.) 
         sys.path.append('/usr/local/python')
